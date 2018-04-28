@@ -4,9 +4,11 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "dev": "ng serve",
     "start": "node server.js",
     "build": "ng build --prod",
-    "test": "snyk test && ng test",
+    "vuln-test": "snyk test",
+    "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "test:headless": "karma start ./karma.conf.js --browsers PhantomJS --single-run",
@@ -20,11 +22,11 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "^1.7.4",
-    "@angular/compiler-cli": "^5.2.10",
     "@angular/animations": "^5.2.0",
+    "@angular/cli": "^1.7.4",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
+    "@angular/compiler-cli": "^5.2.10",
     "@angular/core": "^5.2.0",
     "@angular/forms": "^5.2.0",
     "@angular/http": "^5.2.0",
@@ -41,7 +43,6 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "^1.7.4",
     "@angular/compiler-cli": "^5.2.10",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",
