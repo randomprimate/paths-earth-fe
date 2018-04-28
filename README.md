@@ -1,6 +1,6 @@
 # Paths.Earth Front End
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8c0cd228417f4417a9f3c2cd0860db90)](https://app.codacy.com/app/torres/paths-earth-fe?utm_source=github.com&utm_medium=referral&utm_content=randomprimate/paths-earth-fe&utm_campaign=badger) [![Build Status](https://semaphoreci.com/api/v1/randomprimate/paths-earth-fe/branches/fix-tests-local-and-ci/shields_badge.svg)](https://semaphoreci.com/randomprimate/paths-earth-fe) [![Known Vulnerabilities](https://snyk.io/test/github/randomprimate/paths-earth-fe/badge.svg?targetFile=package.json)](https://snyk.io/test/github/randomprimate/paths-earth-fe?targetFile=package.json)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8c0cd228417f4417a9f3c2cd0860db90)](https://app.codacy.com/app/torres/paths-earth-fe?utm_source=github.com&utm_medium=referral&utm_content=randomprimate/paths-earth-fe&utm_campaign=badger) [![Build Status](https://semaphoreci.com/api/v1/randomprimate/paths-earth-fe/branches/master/shields_badge.svg)](https://semaphoreci.com/randomprimate/paths-earth-fe) [![Known Vulnerabilities](https://snyk.io/test/github/randomprimate/paths-earth-fe/badge.svg?targetFile=package.json)](https://snyk.io/test/github/randomprimate/paths-earth-fe?targetFile=package.json)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
