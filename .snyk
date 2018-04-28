@@ -1,8 +1,77 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.11.0
-ignore: {}
-# patches apply the minimum changes required to fix a vulnerability
-patch:
-  'npm:request:20160119':
-    - codecov.io > request:
-        patched: '2018-04-25T19:17:31.880Z'
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:braces:20180219':
+    - '@angular/compiler-cli > chokidar > anymatch > micromatch > braces':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.541Z'
+    - '@angular/cli > @angular-devkit/core > chokidar > anymatch > micromatch > braces':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.541Z'
+    - '@angular/cli > @angular-devkit/schematics > @angular-devkit/core > chokidar > anymatch > micromatch > braces':
+        reason: None given
+        expires: '2018-05-28T14:05:09.541Z'
+    - '@angular/cli > @schematics/angular > @angular-devkit/core > chokidar > anymatch > micromatch > braces':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.541Z'
+    - '@angular/cli > @schematics/angular > @angular-devkit/schematics > @angular-devkit/core > chokidar > anymatch > micromatch > braces':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.541Z'
+    - '@angular/cli > @schematics/package-update > @angular-devkit/core > chokidar > anymatch > micromatch > braces':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.541Z'
+    - '@angular/cli > @schematics/package-update > @angular-devkit/schematics > @angular-devkit/core > chokidar > anymatch > micromatch > braces':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.541Z'
+    - '@angular/cli > webpack-dev-server > http-proxy-middleware > micromatch > braces':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.541Z'
+  'npm:hoek:20180212':
+    - '@angular/cli > less > request > hawk > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.541Z'
+    - '@angular/cli > less > request > hawk > boom > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > less > request > hawk > sntp > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > less > request > hawk > cryptiles > boom > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > node-sass > request > hawk > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > node-sass > request > hawk > boom > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > node-sass > request > hawk > sntp > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > node-sass > request > hawk > cryptiles > boom > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > sass-loader > node-sass > request > hawk > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > sass-loader > node-sass > request > hawk > boom > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > sass-loader > node-sass > request > hawk > sntp > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > sass-loader > node-sass > request > hawk > cryptiles > boom > hoek':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+  'npm:node-forge:20180226':
+    - '@angular/cli > webpack-dev-server > selfsigned > node-forge':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+  'npm:tunnel-agent:20170305':
+    - '@angular/cli > node-sass > request > tunnel-agent':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
+    - '@angular/cli > sass-loader > node-sass > request > tunnel-agent':
+        reason: No upgrades available
+        expires: '2018-05-28T14:05:09.542Z'
