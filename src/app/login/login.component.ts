@@ -1,37 +1,40 @@
 import { Component, OnInit } from "@angular/core";
-import { Http, Headers, RequestOptions } from "@angular/http";
 import { Router } from "@angular/router";
-import "rxjs/Rx";
+
+import { AuthenticationService } from "../_services/authentication.service";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: "app-login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
 
-  public input: any;
+    model: any = {};
+    loading = false;
+    error = '';
  
-  constructor(private http: Http, private router: Router) {
-      this.input = {
-          "email": "",
-          "password": ""
-      };
-  }
-
-  public login() {
-      if(this.input.email && this.input.password) {
-          let headers = new Headers({ "content-type": "application/json" });
-          let options = new RequestOptions({ headers: headers });
-          this.http.post("http://localhost:3000/login", JSON.stringify(this.input), options)
-              .map(result => result.json())
-              .subscribe(result => {
-                  this.router.navigate(["/dashboard"], { "queryParams": result });
-              });
-      }
-  }
-
-  ngOnInit() {
-  }
-
+    constructor(
+        private router: Router,
+        private authenticationService: AuthenticationService) { }
+ 
+    ngOnInit() {
+        // reset login status
+        this.authenticationService.logout();
+    }
+ 
+    login() {
+        this.loading = true;
+        this.authenticationService.login(this.model.username, this.model.password)
+            .subscribe(result => {
+                if (result === true) {
+                    // login successful
+                    this.router.navigate(['/dashboard']);
+                } else {
+                    // login failed
+                    this.error = "Username or password is incorrect";
+                    this.loading = false;
+                }
+            });
+    }
 }
