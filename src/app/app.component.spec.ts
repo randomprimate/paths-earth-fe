@@ -29,4 +29,10 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('a').textContent).toContain('paths.earth');
   }));
+
+  it('should contain a login link', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('.login').textContent).toContain('Login');
+  }));
 });
