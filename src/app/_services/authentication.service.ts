@@ -6,11 +6,16 @@ import "rxjs/add/operator/map"
 @Injectable()
 export class AuthenticationService {
     public token: string;
- 
+    private loggedIn: boolean = false;
+    
     constructor(private http: Http) {
         // set token if saved in local storage
         var currentUser = JSON.parse(localStorage.getItem("currentUser"));
         this.token = currentUser && currentUser.token;
+    }
+
+    isLoggedIn() {
+        return this.loggedIn;
     }
  
     login(username: string, password: string): Observable<boolean> {
@@ -40,3 +45,16 @@ export class AuthenticationService {
         localStorage.removeItem("currentUser");
     }
 }
+
+/*
+    login(credentials) {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+    
+        return this.http.post(
+          '/login',
+          JSON.stringify(credentials),
+          { headers }
+        );
+      }
+      */
