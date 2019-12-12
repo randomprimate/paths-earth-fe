@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.11.0
+version: v1.14.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:braces:20180219':
@@ -75,3 +75,8 @@ ignore:
     - '@angular/cli > sass-loader > node-sass > request > tunnel-agent':
         reason: No upgrades available
         expires: '2018-05-28T14:05:09.542Z'
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-TREEKILL-536781:
+    - '@angular/cli > @ngtools/webpack > tree-kill':
+        patched: '2019-12-12T04:01:50.193Z'
